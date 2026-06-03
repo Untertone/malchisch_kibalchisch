@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>d209fd4a2675ab1dbdf4f10181323a1911ae9622</guid>
+	<type>material_graph</type>
+	<hash>b1f6a8474e59fe40f51b294e9b871b3c2d2baa4cca12cbcb35985fd95b69ed26</hash>
+	<runtimes>
+		<runtime id="d209fd4a2675ab1dbdf4f10181323a1911ae9622" name="boy_eyes.mgraph" link="0"/>
+		<runtime id="3652f78c3a6b698c3c0fe41b5c3d24e896f57da4" name="boy_eyes" link="1" type="5"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>7ad8c767984b0592e520eb828bffe786519a2963</guid>
+	<type>material_graph</type>
+	<hash>1f904546a84a356109d594bdd9b30bf943dd3d9fcb0ddc676b43b54365abf1d4</hash>
+	<runtimes>
+		<runtime id="7ad8c767984b0592e520eb828bffe786519a2963" name="box_mesh_base.mgraph" link="0"/>
+		<runtime id="484af4f113d191195e75a084109027427f9d0f8d" name="box_mesh_base" link="1" type="5"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>f19bda62edee16595d1e8be4cbfce5f3d0a072b6</guid>
+	<type>node</type>
+	<hash>ee3057d32fe9369aa9460ba633072ab860c85407d9f1b01073555753e707f7cc</hash>
+	<runtimes>
+		<runtime id="f19bda62edee16595d1e8be4cbfce5f3d0a072b6" name="cylinder.node" link="0" type="3"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>d11c2d6efad57a9fda154a55745371b9cde63446</guid>
+	<type>material_graph</type>
+	<hash>f0061fe8dba0ecae21f87934a6d2e6cb9c87392d7c2821fa986a47f3adad22c3</hash>
+	<runtimes>
+		<runtime id="d11c2d6efad57a9fda154a55745371b9cde63446" name="boy_hair.mgraph" link="0"/>
+		<runtime id="b0851c5063ea845debcaf58f124a3636a861d368" name="boy_hair" link="1" type="5"/>
+	</runtimes>
+</asset>

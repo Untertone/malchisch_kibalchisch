@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>30f4af326e5f27daf76e74c9ec355c3e578cba0a</guid>
+	<type>material_graph</type>
+	<hash>6be81012fbf49a6276509c6bfbcacf1fb8a923cecd6313958c60ca414354fd48</hash>
+	<runtimes>
+		<runtime id="30f4af326e5f27daf76e74c9ec355c3e578cba0a" name="boy_brows.mgraph" link="0"/>
+		<runtime id="7cc0abb4900f81be0e6efd23c48b19953e4291cc" name="boy_brows" link="1" type="5"/>
+	</runtimes>
+</asset>

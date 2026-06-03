@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>3c9db0405cc145c78e7c93151d6502038ed1ce8d</guid>
+	<type>launch_settings</type>
+	<hash>01a772dbc9c26ed66512052fb01487ed29866324113cd5182846f8881e382fc3</hash>
+	<runtimes>
+		<runtime id="3c9db0405cc145c78e7c93151d6502038ed1ce8d" name="csharp_template.launch" link="0"/>
+	</runtimes>
+</asset>

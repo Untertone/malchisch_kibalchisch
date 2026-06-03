@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>02d355cec7be62f705ba6b35f13844e323fc94a6</guid>
+	<type>material_graph</type>
+	<hash>3992ca6cb152074773edc3db54dcdf96e03d5957b041d7c7d5141a6433d407eb</hash>
+	<runtimes>
+		<runtime id="02d355cec7be62f705ba6b35f13844e323fc94a6" name="boy_skin.mgraph" link="0"/>
+		<runtime id="a421bbb09a4ff18a796d416f5b900d4c3cc9f2c8" name="boy_skin" link="1" type="5"/>
+	</runtimes>
+</asset>

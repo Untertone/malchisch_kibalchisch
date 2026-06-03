@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>b6f50c618dcb641c4b61266e377665090844a5e9</guid>
+	<type>component</type>
+	<hash>ddfb009247eeee8c0b887e94a30daccaaa7f7812659fb0a3469a432210bb127f</hash>
+	<runtimes>
+		<runtime id="b6f50c618dcb641c4b61266e377665090844a5e9" name="ThirdPersonCamera.cs" link="0"/>
+		<runtime id="6f91d4a5f2412ad0b213d55cac08908835c73634" name="ThirdPersonCamera.prop" link="1" type="4"/>
+	</runtimes>
+</asset>

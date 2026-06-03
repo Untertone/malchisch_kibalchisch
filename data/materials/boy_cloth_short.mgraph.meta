@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>8a6beba6c887434d0d81d42d657e64aaa8f8b47e</guid>
+	<type>material_graph</type>
+	<hash>98ee763e9b088ce475626f765a10975dbedd63b8276e85be26da62ef72f87bab</hash>
+	<runtimes>
+		<runtime id="8a6beba6c887434d0d81d42d657e64aaa8f8b47e" name="boy_cloth_short.mgraph" link="0"/>
+		<runtime id="b6ed15487a4b036fea636327209d467001ec9860" name="boy_cloth_short" link="1" type="5"/>
+	</runtimes>
+</asset>

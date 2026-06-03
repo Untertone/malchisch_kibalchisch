@@ -1,0 +1,83 @@
+# ===========================
+# UNIGINE Engine
+# ===========================
+
+# Large binary asset files (imported FBX files)
+*.fbx
+*.glb
+*.fbx.meta
+*.glb.meta
+
+# Runtime imported assets
+data/.runtimes/
+
+
+
+# Engine binaries and compiled outputs
+bin/
+obj/
+lib/
+
+# Cache files
+data/*.cache
+data/editor.cache
+data/*.gpu_cache
+
+# GUID database
+data/guids.db
+
+# Log files
+bin/log_*.txt
+bin/editor_log_*.txt
+console_history
+
+# Editor backups / autosave
+*~
+
+# ===========================
+# Visual Studio
+# ===========================
+.vs/
+*.user
+*.suo
+*.sln.docstates
+*.userprefs
+*.DotSettings.user
+
+# ===========================
+# .NET / C#
+# ===========================
+**/bin/
+**/obj/
+*.csproj.user
+*.csproj.*.user
+
+# ===========================
+# Build outputs
+# ===========================
+build/
+[Pp]ublish/
+
+# ===========================
+# Temporary files
+repo.json
+repo.txt
+create_repo.bat
+
+# OS files
+# ===========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ===========================
+# Thumbnails
+.thumbnails/
+
+# IDE
+# ===========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

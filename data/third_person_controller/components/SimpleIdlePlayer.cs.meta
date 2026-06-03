@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>f7e590b9fc82a81a7cf7a44b6f34f554a72dc180</guid>
+	<type>component</type>
+	<hash>c64e3a4b1facab1c591241b59ef2183c2a6371fffbdb8bcd40c5d2f17987f491</hash>
+	<runtimes>
+		<runtime id="f7e590b9fc82a81a7cf7a44b6f34f554a72dc180" name="SimpleIdlePlayer.cs" link="0"/>
+		<runtime id="ad179f7e872a834f953ab8d4e5809d50da5ac6df" name="SimpleIdlePlayer.prop" link="1" type="4"/>
+	</runtimes>
+</asset>

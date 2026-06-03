@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>bede62ea8dd830e5b7de4621c9b2f19c36e493c2</guid>
+	<type>material_graph</type>
+	<hash>923c828252ec9dafb611a2f948e318797ee1e89ecfb6d376ab2471e8583f3b8c</hash>
+	<runtimes>
+		<runtime id="bede62ea8dd830e5b7de4621c9b2f19c36e493c2" name="boy_cloth_tshirt.mgraph" link="0"/>
+		<runtime id="b0b0962c1b38b5d80cd4fe3ba19e0eec69bf6c44" name="boy_cloth_tshirt" link="1" type="5"/>
+	</runtimes>
+</asset>

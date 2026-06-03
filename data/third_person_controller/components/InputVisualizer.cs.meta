@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>1680c3ae6cb498b22378e3954b0ad97db23f9a86</guid>
+	<type>component</type>
+	<hash>67c668dce8f21723370087b0dd71698358dfeb1375588c770a36e16d00e5f3a6</hash>
+	<runtimes>
+		<runtime id="1680c3ae6cb498b22378e3954b0ad97db23f9a86" name="InputVisualizer.cs" link="0"/>
+		<runtime id="de477580107fb914596338e5ef0c3c96b851302d" name="InputVisualizer.prop" link="1" type="4"/>
+	</runtimes>
+</asset>

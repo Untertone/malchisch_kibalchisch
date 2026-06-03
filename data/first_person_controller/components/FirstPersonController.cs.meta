@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>0267e4ade74ad6e47bc14aa521c653b5d4225fd5</guid>
+	<type>component</type>
+	<hash>b51d9052d7f1b6137eeda38d8e775a4f55d9d24fd92fde0524603e3172392ed7</hash>
+	<runtimes>
+		<runtime id="0267e4ade74ad6e47bc14aa521c653b5d4225fd5" name="FirstPersonController.cs" link="0"/>
+		<runtime id="11b5afa05cf2f64b284e81a8de17265960120e43" name="FirstPersonController.prop" link="1" type="4"/>
+	</runtimes>
+</asset>

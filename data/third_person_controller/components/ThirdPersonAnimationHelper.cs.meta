@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>c7ebaf87d07d0cf4fc3855cc0c20fda80679ae8f</guid>
+	<type>component</type>
+	<hash>6353506998d15e7e87a80534360fb00d45fa9c3fec5f0b38d68a202a6162b390</hash>
+	<runtimes>
+		<runtime id="c7ebaf87d07d0cf4fc3855cc0c20fda80679ae8f" name="ThirdPersonAnimationHelper.cs" link="0"/>
+		<runtime id="bf9aca2baf1df271457c5d0ab0b26c981820caa2" name="ThirdPersonAnimationHelper.prop" link="1" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>3bd9d2d803425871cf07ae2e8a31f0a1b951d4b9</guid>
+	<type>component</type>
+	<hash>799d2355a3ae606a85f5c9df2533d952a98a4951a735d65cb5d610de1234c426</hash>
+	<runtimes>
+		<runtime id="3bd9d2d803425871cf07ae2e8a31f0a1b951d4b9" name="DepthOfFieldUI.cs" link="0"/>
+		<runtime id="33eff165dfbc4ae96402c147bed4044f066976c4" name="DepthOfFieldUI.prop" link="1" type="4"/>
+	</runtimes>
+</asset>

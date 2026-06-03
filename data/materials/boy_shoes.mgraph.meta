@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>1efea3a2b910a6d4e9c8a079e92f50a736a6b27a</guid>
+	<type>material_graph</type>
+	<hash>f7cc4b6973b94ea8a5334b704c9af56d71e79ed6a70a6d6227267d9f87e37aeb</hash>
+	<runtimes>
+		<runtime id="1efea3a2b910a6d4e9c8a079e92f50a736a6b27a" name="boy_shoes.mgraph" link="0"/>
+		<runtime id="d88fd5a426f42978a956b0537b1758ca442fd3bc" name="boy_shoes" link="1" type="5"/>
+	</runtimes>
+</asset>

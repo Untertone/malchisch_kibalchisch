@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>db1a8cc0af9c991f806c13f2c48062a900c44bf4</guid>
+	<type>node</type>
+	<hash>78a4ca5465a9492b1f9c1c776839cbba36a8119f8bfc6db3daeb80671a286e91</hash>
+	<runtimes>
+		<runtime id="db1a8cc0af9c991f806c13f2c48062a900c44bf4" name="cone.node" link="0" type="3"/>
+	</runtimes>
+</asset>
