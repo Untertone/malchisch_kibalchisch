@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>b700b4b9931d1c39b037d24e1e938cb28885d169</guid>
+	<type>animation_graph</type>
+	<hash>c613e83437ee4c3dc5552363951c40791074222c764091fa15bcaeb9af0a19e6</hash>
+	<runtimes>
+		<runtime id="b700b4b9931d1c39b037d24e1e938cb28885d169" name="animation_graph.agraph" link="0"/>
+		<runtime id="8e5d2b098ca3b4236d4bb3c8bf356f0b3994c028" name="animation_graph" link="1" type="10"/>
+	</runtimes>
+</asset>

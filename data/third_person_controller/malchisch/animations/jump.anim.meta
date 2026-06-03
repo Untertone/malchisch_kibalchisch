@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>08010b6ae73a75c353307869a2d198bf8bbdf20a</guid>
+	<type>animation</type>
+	<hash>2b72a2176f97d6f19e2d0b1ffaed777c56bf7e2c4cffc614336327ab7cf7184f</hash>
+	<runtimes>
+		<runtime id="08010b6ae73a75c353307869a2d198bf8bbdf20a" name="jump.anim" link="0" type="2">
+			<custom_parameters>
+				<parameter type="string" name="anim_mesh">guid://eaa6e49c22866d00d533e829f46bc53cf7a4f719</parameter>
+				<parameter type="float" name="cur_time">20.236021</parameter>
+			</custom_parameters>
+		</runtime>
+	</runtimes>
+</asset>

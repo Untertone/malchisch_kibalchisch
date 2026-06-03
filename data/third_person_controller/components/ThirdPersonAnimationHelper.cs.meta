@@ -2,7 +2,7 @@
 <asset version="2.21.0.0">
 	<guid>c7ebaf87d07d0cf4fc3855cc0c20fda80679ae8f</guid>
 	<type>component</type>
-	<hash>6353506998d15e7e87a80534360fb00d45fa9c3fec5f0b38d68a202a6162b390</hash>
+	<hash>ca56f71b7e78048fbea1736e29ff5ba7d6b7d7404bedfc8e647eacea1350d8ad</hash>
 	<runtimes>
 		<runtime id="c7ebaf87d07d0cf4fc3855cc0c20fda80679ae8f" name="ThirdPersonAnimationHelper.cs" link="0"/>
 		<runtime id="bf9aca2baf1df271457c5d0ab0b26c981820caa2" name="ThirdPersonAnimationHelper.prop" link="1" type="4"/>

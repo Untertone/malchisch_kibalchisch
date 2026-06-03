@@ -1,107 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <nodes version="2.21.0.0">
-	<node type="NodeDummy" id="546036389" name="static_content">
+	<node type="NodeDummy" id="1174534523" name="static_content">
 		<transform>0.99999994 0 0 0.0 0 0.99999994 0 0.0 0 0 0.99999994 0.0 -6.1497464 -14.277789 -0.99999994 1.0</transform>
-		<node type="NodeDummy" id="1992543168" name="glass">
+		<node type="NodeDummy" id="1894949022" name="glass">
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
-			<node type="NodeReference" id="760138783" name="ObjectMeshStatic">
+			<node type="NodeReference" id="1412304741" name="ObjectMeshStatic">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>1.9999998 -3.8213747e-15 8.5264837e-14 0.0 5.6843375e-14 1.3411003e-06 -1.499995 0.0 7.6427164e-15 0.99999487 9.6691758e-07 0.0 -2 2.9000001 2.7499998 1.0</transform>
 			</node>
-			<node type="NodeReference" id="1573563122" name="ObjectMeshStatic_1">
+			<node type="NodeReference" id="1573190016" name="ObjectMeshStatic_1">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>1.9999998 -3.8213582e-15 8.5264803e-14 0.0 5.6843388e-14 8.0465969e-07 -1.4999942 0.0 7.6427181e-15 0.99999481 6.0929125e-07 0.0 -4.5 2.900003 2.7499998 1.0</transform>
 			</node>
-			<node type="NodeReference" id="1903693225" name="ObjectMeshStatic_2">
+			<node type="NodeReference" id="1482202847" name="ObjectMeshStatic_2">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>1.9999998 -3.8213578e-15 8.5264776e-14 0.0 5.6843388e-14 8.0465952e-07 -1.4999938 0.0 7.6427207e-15 0.99999428 6.0929096e-07 0.0 -6.9999995 2.9000025 2.7499993 1.0</transform>
 			</node>
-			<node type="NodeReference" id="712637172" name="ObjectMeshStatic_3">
+			<node type="NodeReference" id="201514674" name="ObjectMeshStatic_3">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>1.9999995 -3.821368e-15 8.5264728e-14 0.0 5.6843368e-14 1.3410986e-06 -1.4999931 0.0 7.6427139e-15 0.99999392 9.6691656e-07 0.0 -9.4999971 2.9000018 2.7499988 1.0</transform>
 			</node>
-			<node type="NodeReference" id="7465411" name="ObjectMeshStatic_4">
+			<node type="NodeReference" id="1018244713" name="ObjectMeshStatic_4">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>1.9999993 -3.8213807e-15 8.5264722e-14 0.0 5.6843348e-14 2.0563514e-06 -1.499993 0.0 7.6427054e-15 0.99999392 1.4437512e-06 0.0 -11.999994 2.900001 2.7499986 1.0</transform>
 			</node>
-			<node type="NodeReference" id="2036761670" name="ObjectMeshStatic_5">
+			<node type="NodeReference" id="1915561140" name="ObjectMeshStatic_5">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>1.999999 -3.8213667e-15 8.5264661e-14 0.0 5.6843354e-14 1.3410975e-06 -1.4999919 0.0 7.6427122e-15 0.99999368 9.6691622e-07 0.0 -14.499993 2.9000001 2.7499983 1.0</transform>
 			</node>
-			<node type="NodeReference" id="707628781" name="ObjectMeshStatic_6">
+			<node type="NodeReference" id="451774595" name="ObjectMeshStatic_6">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>1.999999 -3.8213667e-15 8.5264661e-14 0.0 5.6843354e-14 1.3410975e-06 -1.4999919 0.0 7.6427122e-15 0.99999338 9.6691599e-07 0.0 -14.499995 2.9000001 5.25 1.0</transform>
 			</node>
-			<node type="NodeReference" id="2094441320" name="ObjectMeshStatic_7">
+			<node type="NodeReference" id="330175494" name="ObjectMeshStatic_7">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>1.999999 -3.8213667e-15 8.5264661e-14 0.0 5.6843354e-14 1.3410975e-06 -1.4999919 0.0 7.6427131e-15 0.99999321 9.6691588e-07 0.0 -12 2.9000001 5.25 1.0</transform>
 			</node>
-			<node type="NodeReference" id="228110247" name="ObjectMeshStatic_8">
+			<node type="NodeReference" id="215374765" name="ObjectMeshStatic_8">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>1.9999988 -3.8213663e-15 8.526462e-14 0.0 5.6843354e-14 1.3410969e-06 -1.4999912 0.0 7.6427131e-15 0.99999279 9.6691542e-07 0.0 -9.5000067 2.9000001 5.25 1.0</transform>
 			</node>
-			<node type="NodeReference" id="1786472666" name="ObjectMeshStatic_9">
+			<node type="NodeReference" id="1069386024" name="ObjectMeshStatic_9">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>1.9999986 -3.8213629e-15 8.5264593e-14 0.0 5.6843348e-14 1.3410962e-06 -1.4999905 0.0 7.6427105e-15 0.99999231 9.6691497e-07 0.0 -7.0000138 2.9000001 5.2499995 1.0</transform>
 			</node>
-			<node type="NodeReference" id="230957681" name="ObjectMeshStatic_10">
+			<node type="NodeReference" id="1654446695" name="ObjectMeshStatic_10">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>1.9999983 -3.8213557e-15 8.5264579e-14 0.0 5.6843354e-14 8.0465765e-07 -1.4999903 0.0 7.6427173e-15 0.99999195 6.0928954e-07 0.0 -4.5000205 2.9000001 5.249999 1.0</transform>
 			</node>
-			<node type="NodeReference" id="1915140380" name="ObjectMeshStatic_11">
+			<node type="NodeReference" id="293213338" name="ObjectMeshStatic_11">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>1.9999981 -3.8213519e-15 8.5264505e-14 0.0 5.6843341e-14 8.0465702e-07 -1.4999892 0.0 7.6427148e-15 0.99999177 6.0928932e-07 0.0 -2.0000288 2.9000001 5.2499986 1.0</transform>
 			</node>
-			<node type="NodeReference" id="165904843" name="ObjectMeshStatic_12">
+			<node type="NodeReference" id="1189174065" name="ObjectMeshStatic_12">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>-1.9999983 -5.6843399e-14 -1.6053561e-06 0.0 1.204013e-06 2.6821985e-07 -1.4999939 0.0 6.5843103e-14 -0.99999422 1.788129e-07 0.0 -2 2.5680852 2.7499998 1.0</transform>
 			</node>
-			<node type="NodeReference" id="260467886" name="ObjectMeshStatic_13">
+			<node type="NodeReference" id="134159068" name="ObjectMeshStatic_13">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>-1.999998 -4.0657588e-20 -1.605356e-06 0.0 1.2040124e-06 5.3643942e-07 -1.4999931 0.0 1.2268614e-13 -0.9999938 1.7881285e-07 0.0 -4.5 2.5680881 2.7499998 1.0</transform>
 			</node>
-			<node type="NodeReference" id="848153653" name="ObjectMeshStatic_14">
+			<node type="NodeReference" id="1754462347" name="ObjectMeshStatic_14">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>-1.999998 -4.0657588e-20 -1.605356e-06 0.0 1.2040117e-06 5.3643913e-07 -1.4999923 0.0 1.226861e-13 -0.99999338 1.7881277e-07 0.0 -6.9999995 2.5680876 2.7499993 1.0</transform>
 			</node>
-			<node type="NodeReference" id="1043099664" name="ObjectMeshStatic_15">
+			<node type="NodeReference" id="1618998382" name="ObjectMeshStatic_15">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>-1.9999981 -2.2737351e-13 -1.6053559e-06 0.0 1.2040114e-06 2.6821951e-07 -1.499992 0.0 1.511076e-13 -0.99999321 1.7881273e-07 0.0 -9.4999971 2.5680869 2.7499988 1.0</transform>
 			</node>
-			<node type="NodeReference" id="182912047" name="ObjectMeshStatic_16">
+			<node type="NodeReference" id="2098213109" name="ObjectMeshStatic_16">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>-1.9999979 -1.7053011e-13 -1.6053555e-06 0.0 1.2040115e-06 2.6821954e-07 -1.4999923 0.0 1.2268612e-13 -0.99999344 1.7881275e-07 0.0 -11.999994 2.5680861 2.7499986 1.0</transform>
 			</node>
-			<node type="NodeReference" id="1047258050" name="ObjectMeshStatic_17">
+			<node type="NodeReference" id="1370492368" name="ObjectMeshStatic_17">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>-1.9999976 -5.6843365e-14 -1.6053557e-06 0.0 1.2040105e-06 2.6821928e-07 -1.4999908 0.0 6.5842995e-14 -0.99999285 1.7881267e-07 0.0 -14.499993 2.5680852 2.7499983 1.0</transform>
 			</node>
-			<node type="NodeReference" id="580571193" name="ObjectMeshStatic_18">
+			<node type="NodeReference" id="1630570223" name="ObjectMeshStatic_18">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>-1.9999976 -5.6843365e-14 -1.6053557e-06 0.0 1.2040105e-06 2.6821928e-07 -1.4999908 0.0 6.5842981e-14 -0.99999255 1.7881261e-07 0.0 -14.499995 2.5680852 5.25 1.0</transform>
 			</node>
-			<node type="NodeReference" id="47397956" name="ObjectMeshStatic_19">
+			<node type="NodeReference" id="788531074" name="ObjectMeshStatic_19">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>-1.9999976 -5.6843365e-14 -1.6053557e-06 0.0 1.2040105e-06 2.6821928e-07 -1.4999908 0.0 6.5842968e-14 -0.99999237 1.7881258e-07 0.0 -12 2.5680852 5.25 1.0</transform>
 			</node>
-			<node type="NodeReference" id="1842354899" name="ObjectMeshStatic_20">
+			<node type="NodeReference" id="1579098361" name="ObjectMeshStatic_20">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>-1.9999974 -5.6843351e-14 -1.6053555e-06 0.0 1.20401e-06 2.682192e-07 -1.4999903 0.0 6.5842961e-14 -0.99999219 1.7881256e-07 0.0 -9.5000067 2.5680852 5.25 1.0</transform>
 			</node>
-			<node type="NodeReference" id="1498112534" name="ObjectMeshStatic_21">
+			<node type="NodeReference" id="595056132" name="ObjectMeshStatic_21">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>-1.9999971 -2.2737338e-13 -1.6053552e-06 0.0 1.2040092e-06 2.6821903e-07 -1.4999894 0.0 1.5110736e-13 -0.99999166 1.7881244e-07 0.0 -7.0000138 2.5680852 5.2499995 1.0</transform>
 			</node>
-			<node type="NodeReference" id="1652404861" name="ObjectMeshStatic_22">
+			<node type="NodeReference" id="791570835" name="ObjectMeshStatic_22">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>-1.9999965 -4.0657588e-20 -1.6053547e-06 0.0 1.204009e-06 5.3643794e-07 -1.4999889 0.0 9.4264372e-14 -0.99999106 1.7881234e-07 0.0 -4.5000205 2.5680852 5.249999 1.0</transform>
 			</node>
-			<node type="NodeReference" id="1076089272" name="ObjectMeshStatic_23">
+			<node type="NodeReference" id="1865802198" name="ObjectMeshStatic_23">
 				<reference>guid://cbb22016af69587dc23f3fb886007fb7b63759aa</reference>
 				<transform>-1.9999963 -2.8421663e-13 -1.6053549e-06 0.0 1.2040081e-06 5.3643754e-07 -1.4999878 0.0 2.0795011e-13 -0.99999076 1.788123e-07 0.0 -2.0000288 2.5680852 5.2499986 1.0</transform>
 			</node>
 		</node>
-		<node type="ObjectMeshStatic" id="1053288887" immovable="1" name="template_buildings">
+		<node type="ObjectMeshStatic" id="1745661757" immovable="1" name="template_buildings">
 			<mesh_name>guid://9802276da9e561e8d1bf5c2721ad2b5a2d4a02f1</mesh_name>
 			<surface name="wall_0_mat" intersection="1" collision="1" physics_friction="1" physics_restitution="1" material="b50d447466b5a543f70c09c68846566d9f15c4e8">
 				<lightmap_enabled>1</lightmap_enabled>
@@ -126,46 +126,124 @@
 			<transform>5.9604638e-08 -0.99999982 0 0.0 0.99999982 5.9604638e-08 0 0.0 0 0 0.99999982 0.0 0 0 0 1.0</transform>
 		</node>
 	</node>
-	<node type="NodeDummy" id="1720957866" name="dynamic_content">
+	<node type="NodeDummy" id="802891640" name="dynamic_content">
 		<transform>0.99999994 0 0 0.0 0 0.99999994 0 0.0 0 0 0.99999994 0.0 -6.1497464 -14.277789 -0.99999994 1.0</transform>
-		<node type="NodeReference" id="575616769" name="material_ball">
+		<node type="NodeReference" id="1459733623" name="material_ball">
 			<reference>guid://09c9a80e7e0010153ae52270e2ba530f19742522</reference>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 8 6 1 1.0</transform>
 		</node>
-		<node type="NodeReference" id="1769481324" name="cone">
+		<node type="NodeReference" id="191649642" name="cone">
 			<reference>guid://db1a8cc0af9c991f806c13f2c48062a900c44bf4</reference>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 8 6.2500005 5.75 1.0</transform>
 		</node>
-		<node type="NodeReference" id="77059291" name="cube">
+		<node type="NodeReference" id="85827521" name="cube">
 			<reference>guid://095e96b71e2884aaddf36c010aecd56cff0ad1db</reference>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 8.25 5.5 3.5500014 1.0</transform>
 		</node>
-		<node type="NodeReference" id="1079444606" name="cylinder">
+		<node type="NodeReference" id="1718613548" name="cylinder">
 			<reference>guid://f19bda62edee16595d1e8be4cbfce5f3d0a072b6</reference>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 8 6.5500021 4.6500006 1.0</transform>
 		</node>
-		<node type="NodeReference" id="485646789" name="sphere">
+		<node type="NodeReference" id="377486235" name="sphere">
 			<reference>guid://ce58c1b1fe664f5cab3ba30b9d7f9cee67aebf75</reference>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 8.75 5.4500012 5.3000007 1.0</transform>
 		</node>
-		<node type="NodeReference" id="1408198752" name="cube_2">
+		<node type="NodeReference" id="1901165630" name="cube_2">
 			<reference>guid://095e96b71e2884aaddf36c010aecd56cff0ad1db</reference>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 7.5000005 5.25 6 1.0</transform>
 		</node>
-		<node type="NodeReference" id="344817727" name="cone_1">
+		<node type="NodeReference" id="388036229" name="cone_1">
 			<reference>guid://db1a8cc0af9c991f806c13f2c48062a900c44bf4</reference>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 7.2500014 4.75 4.5 1.0</transform>
 		</node>
-		<node type="NodeReference" id="786337938" name="sphere_1">
+		<node type="NodeReference" id="508655136" name="sphere_1">
 			<reference>guid://ce58c1b1fe664f5cab3ba30b9d7f9cee67aebf75</reference>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 9 6.2500005 4.5 1.0</transform>
 		</node>
-		<node type="NodeReference" id="1771599561" name="cylinder_2">
+		<node type="NodeReference" id="1153610495" name="cylinder_2">
 			<reference>guid://f19bda62edee16595d1e8be4cbfce5f3d0a072b6</reference>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 8.75 5.75 6.5000005 1.0</transform>
 		</node>
 	</node>
-	<node type="NodeDummy" id="1914835348" name="lighting">
+	<node type="NodeDummy" id="1217045586" name="lighting">
 		<transform>0.99999994 0 0 0.0 0 0.99999994 0 0.0 0 0 0.99999994 0.0 -6.1497464 -14.277789 -0.99999994 1.0</transform>
+		<node type="LightWorld" id="1509771586" name="LightWorld">
+			<scattering>1</scattering>
+			<disable_angle>100</disable_angle>
+			<shadow_height>10</shadow_height>
+			<shadow_width>10</shadow_width>
+			<shadow_zfar>100</shadow_zfar>
+			<shadow_cascade_mode>0</shadow_cascade_mode>
+			<num_shadow_cascades>4</num_shadow_cascades>
+			<is_shadow_partial_update>0</is_shadow_partial_update>
+			<shadow_cascade_borders>0.0149999997 0.0500000007 0.200000003</shadow_cascade_borders>
+			<color_mode>1</color_mode>
+			<shadow_resolution>5</shadow_resolution>
+			<shadow_bias>1</shadow_bias>
+			<mode>1</mode>
+			<shadow_filter_mode>-1</shadow_filter_mode>
+			<shadow_filter>1</shadow_filter>
+			<shadow_penumbra_mode>-1</shadow_penumbra_mode>
+			<shadow_penumbra>0</shadow_penumbra>
+			<shadow_screen_space>0</shadow_screen_space>
+			<shadow_screen_space_num_rays>3</shadow_screen_space_num_rays>
+			<shadow_screen_space_num_steps>6</shadow_screen_space_num_steps>
+			<shadow_screen_space_noise_ray>0.150000006</shadow_screen_space_noise_ray>
+			<shadow_screen_space_noise_step>1</shadow_screen_space_noise_step>
+			<shadow_screen_space_step_size_near_distance>0</shadow_screen_space_step_size_near_distance>
+			<shadow_screen_space_step_size_far_distance>500</shadow_screen_space_step_size_far_distance>
+			<shadow_screen_space_step_size_near>2</shadow_screen_space_step_size_near>
+			<shadow_screen_space_step_size_far>30</shadow_screen_space_step_size_far>
+			<shadow_screen_space_threshold_near_distance>0</shadow_screen_space_threshold_near_distance>
+			<shadow_screen_space_threshold_far_distance>200</shadow_screen_space_threshold_far_distance>
+			<shadow_screen_space_threshold_near>3</shadow_screen_space_threshold_near>
+			<shadow_screen_space_threshold_far>0.5</shadow_screen_space_threshold_far>
+			<shadow_color_texture_mode>1</shadow_color_texture_mode>
+			<shadow_screen_space_softness>0</shadow_screen_space_softness>
+			<shadow_screen_space_translucent_depth_perspective_compensation>0.200000003</shadow_screen_space_translucent_depth_perspective_compensation>
+			<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
+			<baked_depth_texture replace="934aeb76686b39d7acd99aeb8f00361c4c71881b"/>
+			<lens_flare_enabled>0</lens_flare_enabled>
+			<lens_flare_texture>core/textures/lens_flares_default.texture</lens_flare_texture>
+			<lens_flare_intensity>1</lens_flare_intensity>
+			<lens_flare_occlusion_fade>1</lens_flare_occlusion_fade>
+			<lens_flare_occlusion_fade_border>0.200000003</lens_flare_occlusion_fade_border>
+			<lens_flare_position_offset>0 0 0</lens_flare_position_offset>
+			<lens_flare_use_light_color>1</lens_flare_use_light_color>
+			<lens_flare_billboards num="31">
+				<billboard name="flare_0" offset="0" size="10" rotate="0" uv_lower_left="0 0" uv_upper_right="0.5 0.5" color="1 1 1 1" offset_scale="1" intensity="0.800000012"/>
+				<billboard name="flare_1" offset="0" size="0.289999992" rotate="1" uv_lower_left="0.5 0.75" uv_upper_right="0.75 1" color="1 1 1 1" offset_scale="1" intensity="0.0299999993"/>
+				<billboard name="flare_2" offset="0.0529999994" size="0.860000014" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.941176534 0.788235366 1 1" offset_scale="1" intensity="0.5"/>
+				<billboard name="flare_3" offset="0.0900000036" size="0.49000001" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.772549093 0.796078503 1 1" offset_scale="1" intensity="0.75999999"/>
+				<billboard name="flare_4" offset="0.122000001" size="0.409999996" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.792156935 1 0.82745105 1" offset_scale="1" intensity="0.200000003"/>
+				<billboard name="flare_5" offset="0.203999996" size="0.330000013" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.80392164 0.894117713 1 1" offset_scale="1" intensity="0.300000012"/>
+				<billboard name="flare_6" offset="0.432999998" size="0.649999976" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.929411829 1 0.768627524 1" offset_scale="1" intensity="0.200000003"/>
+				<billboard name="flare_7" offset="0.477999985" size="1.5" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.807843208 1 0.886274576 1" offset_scale="1" intensity="0.349999994"/>
+				<billboard name="flare_8" offset="0.52700001" size="0.810000002" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="1 0.90196085 0.788235366 1" offset_scale="1" intensity="0.200000003"/>
+				<billboard name="flare_9" offset="0.600000024" size="0.409999996" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.768627524 1 0.894117713 1" offset_scale="1" intensity="0.200000003"/>
+				<billboard name="flare_10" offset="0.615999997" size="0.569999993" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.796078503 1 0.921568692 1" offset_scale="1" intensity="0.400000006"/>
+				<billboard name="flare_11" offset="0.652999997" size="0.779999971" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.831372619 0.933333397 1 1" offset_scale="1" intensity="0.349999994"/>
+				<billboard name="flare_12" offset="0.717999995" size="1.71000004" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.878431439 1 0.796078503 1" offset_scale="1" intensity="0.150000006"/>
+				<billboard name="flare_13" offset="0.754999995" size="1.13999999" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.760784388 1 0.843137324 1" offset_scale="1" intensity="0.0500000007"/>
+				<billboard name="flare_14" offset="0.967000008" size="0.540000021" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="1 0.878431439 0.772549093 1" offset_scale="1" intensity="0.100000001"/>
+				<billboard name="flare_15" offset="0.338999987" size="0.289999992" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.674509823 1 0.698039234 1" offset_scale="1" intensity="0.300000012"/>
+				<billboard name="flare_16" offset="0.00499999989" size="2" rotate="1" uv_lower_left="0 0.75" uv_upper_right="0.25 1" color="1 1 1 1" offset_scale="0" intensity="0.0799999982"/>
+				<billboard name="flare_17" offset="-0.75" size="1" rotate="1" uv_lower_left="0.5 0.5" uv_upper_right="0.75 0.75" color="1 1 1 1" offset_scale="12.2399998" intensity="0.289999992"/>
+				<billboard name="flare_18" offset="0.75" size="1" rotate="1" uv_lower_left="0.5 0.5" uv_upper_right="0.75 0.75" color="1 1 1 1" offset_scale="12.2399998" intensity="0.289999992"/>
+				<billboard name="flare_19" offset="0" size="10" rotate="0" uv_lower_left="0.5 0" uv_upper_right="1 0.5" color="1 1 1 1" offset_scale="1" intensity="0.140000001"/>
+				<billboard name="flare_20" offset="0.245199993" size="0.610000014" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.972549081 1 0.898039281 1" offset_scale="1" intensity="0.289999992"/>
+				<billboard name="flare_21" offset="-0.1184" size="0.800000012" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.972549081 1 0.898039281 1" offset_scale="1" intensity="0.270000011"/>
+				<billboard name="flare_22" offset="-0.170000002" size="0.435000002" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.972549081 1 0.898039281 1" offset_scale="1" intensity="0.239999995"/>
+				<billboard name="flare_23" offset="-0.223599985" size="0.660000026" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.972549081 1 0.898039281 1" offset_scale="1" intensity="0.200000003"/>
+				<billboard name="flare_24" offset="-0.340499997" size="1.39499998" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.654901981 1 0.847058892 1" offset_scale="1" intensity="0.209999993"/>
+				<billboard name="flare_25" offset="-0.474399984" size="0.944999993" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="1 0.917647123 0.811764777 1" offset_scale="1" intensity="0.349999994"/>
+				<billboard name="flare_26" offset="-0.899999976" size="2.2650001" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.94901967 1 0.80392164 1" offset_scale="1" intensity="0.300000012"/>
+				<billboard name="flare_27" offset="0.845000029" size="3.19000006" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.972549081 1 0.898039281 1" offset_scale="1" intensity="0.180000007"/>
+				<billboard name="flare_28" offset="1" size="7.78999996" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.972549081 1 0.898039281 1" offset_scale="1" intensity="0.200000003"/>
+				<billboard name="flare_29" offset="0.936999977" size="0.449999988" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.972549081 1 0.898039281 1" offset_scale="1" intensity="0.180000007"/>
+				<billboard name="flare_30" offset="1" size="1.03999996" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.972549081 1 0.898039281 1" offset_scale="1" intensity="0.150000006"/>
+			</lens_flare_billboards>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 10.754991 0.44538131 0.99999982 1.0</transform>
+		</node>
 	</node>
 </nodes>

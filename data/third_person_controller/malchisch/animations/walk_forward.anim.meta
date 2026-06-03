@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>fcf6fa2130441fe7b8064080efc613a11d76a3e0</guid>
+	<type>animation</type>
+	<hash>f8d6531ad3385c6a9a46bf2bffeb55a87077f97797fd517d2b56bfea05755d26</hash>
+	<runtimes>
+		<runtime id="fcf6fa2130441fe7b8064080efc613a11d76a3e0" name="walk_forward.anim" link="0" type="2">
+			<custom_parameters>
+				<parameter type="string" name="anim_mesh">guid://aee24cc519905b27cb493f94b523bf9128b56e74</parameter>
+				<parameter type="float" name="cur_time">21.5871353</parameter>
+			</custom_parameters>
+		</runtime>
+	</runtimes>
+</asset>

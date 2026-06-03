@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>45bf344d127916abb8fab6cd827d0628cca2ea4a</guid>
+	<type>texture</type>
+	<hash>facd447c5a9098f9bda592a404984bde4e47033d6d704327aefc7e7b6991d9fb</hash>
+	<runtimes>
+		<runtime id="45bf344d127916abb8fab6cd827d0628cca2ea4a" name="Ch15_1002_Emissive.png" link="0" type="6"/>
+		<runtime id="ba1c10476e21d3d2e3efc6c7ae5c8744d13f6c0c" name="Ch15_1002_Emissive.texture" link="1" type="6"/>
+	</runtimes>
+	<parameters>
+		<parameter type="int" name="blur_radius">1</parameter>
+		<parameter type="string" name="height">auto</parameter>
+		<parameter type="string" name="image_format">DXT1</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="bool" name="mipmap_sharp_only_lightness">1</parameter>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="preset_name">custom</parameter>
+		<parameter type="float" name="sharpness_intensity">0.25</parameter>
+		<parameter type="float" name="sharpness_radius">1</parameter>
+		<parameter type="bool" name="srgb_correction">1</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="width">auto</parameter>
+	</parameters>
+</asset>

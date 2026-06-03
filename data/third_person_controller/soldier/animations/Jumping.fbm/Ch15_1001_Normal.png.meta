@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>943ea3f06de15efe1af3d33cf361295369652e1d</guid>
+	<type>texture</type>
+	<hash>cee65980bfa13ab8b13fc8c85208c2c0135e06b70d8d561ef60cd14417a0851d</hash>
+	<runtimes>
+		<runtime id="943ea3f06de15efe1af3d33cf361295369652e1d" name="Ch15_1001_Normal.png" link="0" type="6"/>
+		<runtime id="f59042a27fd07e1a0ce93ace45e701eae9060657" name="Ch15_1001_Normal.texture" link="1" type="6"/>
+	</runtimes>
+	<parameters>
+		<parameter type="int" name="blur_radius">1</parameter>
+		<parameter type="string" name="height">auto</parameter>
+		<parameter type="string" name="image_format">ATI2</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="bool" name="mipmap_sharp_only_lightness">0</parameter>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="preset_name">normal map (rg)</parameter>
+		<parameter type="float" name="sharpness_intensity">0.25</parameter>
+		<parameter type="float" name="sharpness_radius">1</parameter>
+		<parameter type="bool" name="srgb_correction">0</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="width">auto</parameter>
+	</parameters>
+</asset>

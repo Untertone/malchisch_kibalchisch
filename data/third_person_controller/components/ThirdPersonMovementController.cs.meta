@@ -2,7 +2,7 @@
 <asset version="2.21.0.0">
 	<guid>ef1c2ea980617014d8746cd0b640bdc1554bf2a8</guid>
 	<type>component</type>
-	<hash>a0cb7909d70f92d8852c4780025d29bb60e05ed23707f6a976542ad7c55b6405</hash>
+	<hash>70f8e640a48ba22e14ed8955de28b9a8aa7d180134d08eb81462df2ec650b906</hash>
 	<runtimes>
 		<runtime id="ef1c2ea980617014d8746cd0b640bdc1554bf2a8" name="ThirdPersonMovementController.cs" link="0"/>
 		<runtime id="dae9d9df299d4d744ede8c042ed262c2866135e7" name="ThirdPersonMovementController.prop" link="1" type="4"/>

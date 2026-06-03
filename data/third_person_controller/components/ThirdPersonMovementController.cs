@@ -1,6 +1,10 @@
 // Third-person character controller for Little Nightmares-style gameplay.
 // Simplified version: direct transform manipulation, no physics body.
-// Features: 8-directional movement relative to camera, jump, ground check via raycast.
+// Features: 8-directional movement relative to camera, jump, ground check via raycast,
+// crouch toggle, interact raycast.
+//
+// Animation states driven via ThirdPersonAnimationHelper:
+//   0 = IDLE, 1 = WALK, 2 = RUN, 3 = JUMP, 4 = CROUCH, 5 = INTERACT
 
 #region Math Variables
 #if UNIGINE_DOUBLE
@@ -29,9 +33,12 @@ public partial class ThirdPersonMovementController : Component
 	#region Animation State Enum
 	public enum CharacterState
 	{
-		IDLE, WALK, RUN, JUMP_UP, JUMP_FALL, LAND,
-		CROUCH, CRAWL, LEDGE_GRAB_IDLE, LEDGE_GRAB_MOVE, CLIMB_UP,
-		SWING, PUSH, PULL, INTERACT, CLIMB_LADDER
+		IDLE = 0,
+		WALK = 1,
+		RUN = 2,
+		JUMP = 3,       // любая фаза прыжка (вверх/вниз/приземление)
+		CROUCH = 4,
+		INTERACT = 5
 	}
 	#endregion
 
@@ -49,7 +56,7 @@ public partial class ThirdPersonMovementController : Component
 	private Input.KEY jumpKey = Input.KEY.SPACE;
 	[ShowInEditor][Parameter(Group = "Input", Tooltip = "Interact key")]
 	private Input.KEY interactKey = Input.KEY.E;
-	[ShowInEditor][Parameter(Group = "Input", Tooltip = "Crouch/Crawl key")]
+	[ShowInEditor][Parameter(Group = "Input", Tooltip = "Crouch/Crawl key (toggle)")]
 	private Input.KEY crouchKey = Input.KEY.ANY_CTRL;
 	[ShowInEditor][Parameter(Group = "Input", Tooltip = "Toggle camera rotation key")]
 	private Input.KEY toggleCameraRotationKey = Input.KEY.M;
@@ -60,6 +67,8 @@ public partial class ThirdPersonMovementController : Component
 	private float walkSpeed = 3.0f;
 	[ShowInEditor][ParameterSlider(Min = 0.0f, Group = "Movement", Tooltip = "Run speed (units/sec)")]
 	private float runSpeed = 6.0f;
+	[ShowInEditor][ParameterSlider(Min = 0.0f, Group = "Movement", Tooltip = "Crouch speed (units/sec)")]
+	private float crouchSpeed = 1.5f;
 	[ShowInEditor][ParameterSlider(Min = 0.0f, Group = "Movement", Tooltip = "Acceleration")]
 	private float acceleration = 20.0f;
 	[ShowInEditor][ParameterSlider(Min = 0.0f, Group = "Movement", Tooltip = "Deceleration / damping")]
@@ -93,7 +102,11 @@ public partial class ThirdPersonMovementController : Component
 	public bool IsGround { get; private set; } = false;
 	public Vec3 Velocity { get; private set; } = Vec3.ZERO;
 	public float Speed { get; private set; } = 0.0f;
+	/// <summary>Normalized speed 0..1 (0=stopped, 1=runSpeed) для blend-параметра анимации.</summary>
+	public float NormalizedSpeed { get; private set; } = 0.0f;
 	public Vec3 MoveDirection { get; private set; } = Vec3.FORWARD;
+	/// <summary>True, если персонаж в приседе.</summary>
+	public bool IsCrouching { get; private set; } = false;
 
 	public delegate void AnimationStateChanged(CharacterState oldState, CharacterState newState);
 	public event AnimationStateChanged OnAnimationStateChanged = null;
@@ -115,6 +128,9 @@ public partial class ThirdPersonMovementController : Component
 	private bool jumpRequested = false;
 	private bool toggleCameraRotationRequested = false;
 	private bool previousToggleCameraRotationState = false;
+
+	/// <summary>Счётчик времени с момента прыжка (чтобы не спамить LAND).</summary>
+	private float jumpTimer = 0.0f;
 
 	#endregion
 
@@ -150,8 +166,6 @@ public partial class ThirdPersonMovementController : Component
 
 		UpdateInput();
 		UpdateMovement(ifps);
-		// Сначала поворот — чтобы SetWorldDirection не сдвинул позицию,
-		// если у ноды есть локальное смещение пивота
 		UpdateCharacterRotation(ifps);
 		UpdateTransform();
 	}
@@ -162,6 +176,9 @@ public partial class ThirdPersonMovementController : Component
 
 	private void UpdateInput()
 	{
+		//!!! ВАЖНО: читаем edge (IsKeyDown) для кнопок-триггеров,
+		//           а не состояние зажатия (IsKeyPressed).
+		//           Иначе двойные срабатывания пока контроллер не активен.
 		inputDirection = Vec2.ZERO;
 		jumpRequested = false;
 		interactRequested = false;
@@ -180,6 +197,13 @@ public partial class ThirdPersonMovementController : Component
 
 		jumpRequested = Input.IsKeyDown(jumpKey);
 		interactRequested = Input.IsKeyDown(interactKey);
+
+		// Crouch toggle (нажатие — переключение)
+		if (Input.IsKeyDown(crouchKey))
+		{
+			IsCrouching = !IsCrouching;
+			Log.Message("ThirdPersonController: Crouch {0}\n", IsCrouching ? "ON" : "OFF");
+		}
 
 		if (interactRequested)
 			TryInteract();
@@ -202,20 +226,27 @@ public partial class ThirdPersonMovementController : Component
 	{
 		CheckGround();
 
-		// Gravity
+		// --- Jump timer (защита от мгновенного LAND после прыжка) ---
+		if (!IsGround)
+			jumpTimer += ifps;
+		else
+			jumpTimer = 0.0f;
+
+		// --- Gravity ---
 		if (!IsGround)
 			verticalVelocity += gravityAccel * ifps;
 		else if (verticalVelocity < 0.0f)
 			verticalVelocity = 0.0f;
 
-		// Jump
-		if (jumpRequested && IsGround)
+		// --- Jump ---
+		if (jumpRequested && IsGround && !IsCrouching)
 		{
 			verticalVelocity = jumpPower;
 			IsGround = false;
+			jumpTimer = 0.0f;
 		}
 
-		// Horizontal movement
+		// --- Horizontal movement ---
 		Vec3 targetVelocity = Vec3.ZERO;
 		if (inputDirection.Length2 > 0.01f)
 		{
@@ -235,7 +266,13 @@ public partial class ThirdPersonMovementController : Component
 
 				MoveDirection = wishDir;
 
-				float speed = Input.IsKeyPressed(runKey) ? runSpeed : walkSpeed;
+				// Выбор скорости (crouch переопределяет walk/run)
+				float speed;
+				if (IsCrouching)
+					speed = crouchSpeed;
+				else
+					speed = Input.IsKeyPressed(runKey) ? runSpeed : walkSpeed;
+
 				targetVelocity = wishDir * speed;
 			}
 		}
@@ -273,7 +310,12 @@ public partial class ThirdPersonMovementController : Component
 		currentVelocity.z = verticalVelocity;
 
 		Velocity = currentVelocity;
-		Speed = new Vec3(horizontalVel.x, horizontalVel.y, 0.0f).Length;
+		float horizontalSpeed = new Vec3(horizontalVel.x, horizontalVel.y, 0.0f).Length;
+		Speed = horizontalSpeed;
+
+		// Normalized speed: 0 = stopped, 1 = runSpeed
+		float maxSpeed = IsCrouching ? crouchSpeed : runSpeed;
+		NormalizedSpeed = maxSpeed > 0.01f ? MathLib.Clamp(horizontalSpeed / maxSpeed, 0.0f, 1.0f) : 0.0f;
 
 		UpdateAnimationState();
 	}
@@ -282,12 +324,30 @@ public partial class ThirdPersonMovementController : Component
 	{
 		CharacterState newState = State;
 
+		// Приоритет: INTERACT > JUMP > CROUCH > движение
+		if (State == CharacterState.INTERACT)
+		{
+			// Interact — одноразовое событие; возвращаемся в обычное состояние на след. кадр
+			// (Сам TryInteract уже выставил INTERACT на один кадр)
+			// Здесь просто сбрасываем, чтобы не застрять в INTERACT
+		}
+
 		if (!IsGround)
-			newState = verticalVelocity > 0.0f ? CharacterState.JUMP_UP : CharacterState.JUMP_FALL;
+		{
+			newState = CharacterState.JUMP;
+		}
+		else if (IsCrouching)
+		{
+			newState = CharacterState.CROUCH;
+		}
 		else if (inputDirection.Length2 > 0.01f)
+		{
 			newState = Input.IsKeyPressed(runKey) ? CharacterState.RUN : CharacterState.WALK;
+		}
 		else
+		{
 			newState = CharacterState.IDLE;
+		}
 
 		if (newState != State)
 		{
@@ -402,12 +462,10 @@ public partial class ThirdPersonMovementController : Component
 		if (IsGround && hasGroundSnap && currentVelocity.z <= 0.0f)
 		{
 			// Плавный snap к земле — без микродребезга Z
-			// Если Z-скорость нулевая, прижимаем с exponential smoothing
 			float groundZ = groundSnapPos.z;
 			float diffZ = groundZ - newPos.z;
 			if (MathLib.Abs(diffZ) > 0.001f)
 			{
-				// Быстрое притяжение к земле (frame-rate independent)
 				float snapAlpha = 1.0f - MathLib.Exp(-30.0f * ifps);
 				newPos.z += diffZ * snapAlpha;
 				if (MathLib.Abs(groundZ - newPos.z) < 0.001f)
@@ -462,7 +520,6 @@ public partial class ThirdPersonMovementController : Component
 		}
 
 		// Адаптивная скорость: плавно нарастает от MIN (малые углы) до MAX (большие)
-		// angleDeg in [0, ROTATION_FAST_THRESHOLD_DEG] → скорость in [MIN, MAX]
 		float speedFactor = MathLib.Clamp(angleDeg / ROTATION_FAST_THRESHOLD_DEG, 0.0f, 1.0f);
 		float rotationSpeed = MathLib.Lerp(ROTATION_SPEED_MIN, ROTATION_SPEED_MAX, speedFactor);
 
@@ -470,7 +527,6 @@ public partial class ThirdPersonMovementController : Component
 
 		if (maxStep >= angleDeg)
 		{
-			// Достигаем цели за один кадр
 			node.SetWorldDirection(new vec3(faceDir), vec3.UP, MathLib.AXIS.Y);
 		}
 		else
@@ -500,13 +556,9 @@ public partial class ThirdPersonMovementController : Component
 		}
 	}
 
-	/// <summary>Is camera rotation currently enabled?</summary>
 	public bool IsCameraRotationEnabled
 	{
-		get
-		{
-			return cameraComponent != null ? cameraComponent.CameraRotationEnabled : false;
-		}
+		get { return cameraComponent != null ? cameraComponent.CameraRotationEnabled : false; }
 	}
 
 	#endregion

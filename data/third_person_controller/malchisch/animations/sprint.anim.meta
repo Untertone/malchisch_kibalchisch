@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>e421880ccf4ee245493d6559ed2f325766f0e849</guid>
+	<type>animation</type>
+	<hash>93cf6474201059505b8e3fa902b817e0e706cfa04f66b23d36b9d4939e3853aa</hash>
+	<runtimes>
+		<runtime id="e421880ccf4ee245493d6559ed2f325766f0e849" name="sprint.anim" link="0" type="2">
+			<custom_parameters>
+				<parameter type="string" name="anim_mesh">guid://d8c7e1c8ae89590556f3510599ab9ea4f7c007f5</parameter>
+				<parameter type="float" name="cur_time">4.07069826</parameter>
+			</custom_parameters>
+		</runtime>
+	</runtimes>
+</asset>

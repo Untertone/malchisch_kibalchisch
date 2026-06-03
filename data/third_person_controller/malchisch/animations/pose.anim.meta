@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>5194c9b538cf86525f83dcfa482e8752f1d50265</guid>
+	<type>animation</type>
+	<hash>5f8bb7f347fc2666d07d71488ef9faa1a3ff53e79dff72b798d592c4dd09e1ed</hash>
+	<runtimes>
+		<runtime id="5194c9b538cf86525f83dcfa482e8752f1d50265" name="pose.anim" link="0" type="2">
+			<custom_parameters>
+				<parameter type="string" name="anim_mesh">guid://213bfdaf34a19c93538c8256cda6e02d86111936</parameter>
+				<parameter type="float" name="cur_time">0.606179416</parameter>
+			</custom_parameters>
+		</runtime>
+	</runtimes>
+</asset>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>02ec14bdfbc4a53e478e773d32d9a13d086e6f7a</guid>
+	<type>texture</type>
+	<hash>6d3adbdef334e30a2e94cb5af2fadf45fc527e70c0b838dd961fcaac96dfe97a</hash>
+	<runtimes>
+		<runtime id="02ec14bdfbc4a53e478e773d32d9a13d086e6f7a" name="Ch15_1001_Specular.png" link="0" type="6"/>
+		<runtime id="0a3006372f2d210a70059cb759cf107de0f798bc" name="Ch15_1001_Specular.texture" link="1" type="6"/>
+	</runtimes>
+	<parameters>
+		<parameter type="int" name="blur_radius">1</parameter>
+		<parameter type="string" name="height">auto</parameter>
+		<parameter type="string" name="image_format">DXT5</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="bool" name="mipmap_sharp_only_lightness">1</parameter>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="preset_name">specular</parameter>
+		<parameter type="float" name="sharpness_intensity">0.25</parameter>
+		<parameter type="float" name="sharpness_radius">1</parameter>
+		<parameter type="bool" name="srgb_correction">1</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="width">auto</parameter>
+	</parameters>
+</asset>

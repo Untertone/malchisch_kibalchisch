@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>40970b4e4ae6f1d329e472b598fbc05013792a26</guid>
+	<type>texture</type>
+	<hash>af041dab729b7fc3a3b3628d22d78df800118a90382af41c99bd3a3b6e8dd884</hash>
+	<runtimes>
+		<runtime id="40970b4e4ae6f1d329e472b598fbc05013792a26" name="Ch15_1002_Diffuse.png" link="0" type="6"/>
+		<runtime id="ff696d30b025ecc37b3f94ef258c41944fc2a448" name="Ch15_1002_Diffuse.texture" link="1" type="6"/>
+	</runtimes>
+	<parameters>
+		<parameter type="int" name="blur_radius">1</parameter>
+		<parameter type="string" name="height">auto</parameter>
+		<parameter type="string" name="image_format">DXT1</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="bool" name="mipmap_sharp_only_lightness">1</parameter>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="preset_name">albedo (rgb)</parameter>
+		<parameter type="float" name="sharpness_intensity">0.25</parameter>
+		<parameter type="float" name="sharpness_radius">1</parameter>
+		<parameter type="bool" name="srgb_correction">1</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="width">auto</parameter>
+	</parameters>
+</asset>

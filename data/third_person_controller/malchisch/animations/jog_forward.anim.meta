@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>cdddb3e589162cf5671a42343bbb14cfbdeb4514</guid>
+	<type>animation</type>
+	<hash>543fc4d9cc87c9c5ec6df981fd8748aafcc22d902f57ac5f9772d4d2bb588fe7</hash>
+	<runtimes>
+		<runtime id="cdddb3e589162cf5671a42343bbb14cfbdeb4514" name="jog_forward.anim" link="0" type="2">
+			<custom_parameters>
+				<parameter type="string" name="anim_mesh">guid://22b5a547527a0a560aa46ef455df4ec919503f37</parameter>
+				<parameter type="float" name="cur_time">9.21652603</parameter>
+			</custom_parameters>
+		</runtime>
+	</runtimes>
+</asset>

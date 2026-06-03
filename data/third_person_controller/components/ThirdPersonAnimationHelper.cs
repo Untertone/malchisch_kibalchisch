@@ -1,16 +1,16 @@
 // ThirdPersonAnimationHelper
 // Управляет анимацией персонажа через Anim Graph (NodeSkeletonPose + AnimScript).
 //
-// Структура графа animation_graph.agraph:
-//   [Animation Player: idle]  → A ─┐
-//                                   ├─ [Blend Poses] → [Output Pose]
-//   [Animation Player: jog_forward] → B ─┘
-//   [Float: weight 0..1] ──────────→ Weight
+// Параметры графа (.agraph):
+//   state (Int)  — дискретный выбор состояния в State Machine графа:
+//       0 = IDLE, 1 = WALK, 2 = RUN, 3 = JUMP, 4 = CROUCH, 5 = INTERACT
+//   blend (Float) — 0..1 continuous blend внутри одного состояния
+//       (например speed 0..1 для Walk→Run, или crouchAmount)
 //
 // Логика:
-//   weight = 0.0  → чистый Idle
-//   weight = 1.0  → чистый Run (jog_forward)
-//   Переход плавный: weight движется к цели с configurable скоростью.
+//   state устанавливается мгновенно по CharacterState.
+//   blend плавно интерполируется к NormalizedSpeed или к 1 для прыжка.
+//   При INTERACT blend = 1 (один раз), затем возвращается к предыдущему.
 
 #region Math Variables
 #if UNIGINE_DOUBLE
@@ -48,21 +48,37 @@ public partial class ThirdPersonAnimationHelper : Component
 	private NodeSkeletonPose skeletonPose = null;
 
 	[ShowInEditor]
-	[Parameter(Group = "Anim Graph", Tooltip = "Имя Float-параметра в Anim Graph (см. Float-нода в графе)")]
-	private string weightParamName = "weight";
+	[Parameter(Group = "Anim Graph", Tooltip = "Имя Int-параметра в Anim Graph для выбора состояния")]
+	private string stateParamName = "state";
+
+	[ShowInEditor]
+	[Parameter(Group = "Anim Graph", Tooltip = "Имя Float-параметра в Anim Graph для blend (walk→run, crouch amount, etc.)")]
+	private string blendParamName = "blend";
 
 	[ShowInEditor]
 	[ParameterSlider(Min = 0.1f, Max = 20.0f, Group = "Anim Graph",
-		Tooltip = "Скорость интерполяции weight: больше = быстрее смена анимации")]
+		Tooltip = "Скорость интерполяции blend: больше = быстрее")]
 	private float blendSpeed = 5.0f;
+
+	[ShowInEditor]
+	[Parameter(Group = "Debug", Tooltip = "Логировать смену состояний")]
+	private bool verbose = false;
 
 	#endregion
 
 	#region Private State
 
 	private AnimScript animScript = null;
-	private float currentWeight = 0.0f;   // текущее значение weight (Idle=0, Run=1)
 	private bool failed = false;
+
+	// Текущий сглаженный blend
+	private float currentBlend = 0.0f;
+
+	// Защита от повторного выставления state (храним предыдущее)
+	private int previousState = -1;
+
+	// При INTERACT надо вернуться на предыдущий state после одного кадра
+	private bool interactPending = false;
 
 	#endregion
 
@@ -110,12 +126,17 @@ public partial class ThirdPersonAnimationHelper : Component
 			return;
 		}
 
-		// --- Стартовать проигрывание ---
-		currentWeight = 0.0f;
-		animScript.SetParamFloat(weightParamName, currentWeight);
+		// --- Инициализировать параметры ---
+		currentBlend = 0.0f;
+		previousState = -1;
+		animScript.SetParamInt(stateParamName, 0);
+		animScript.SetParamFloat(blendParamName, 0.0f);
 		skeletonPose.Play();
 
-		Log.Message($"[ThirdPersonAnimationHelper] OK. Граф: \"{animScript.FilePath}\", параметр: \"{weightParamName}\"\n");
+		// Подписка на смену состояния
+		movementController.OnAnimationStateChanged += OnStateChanged;
+
+		Log.Message($"[ThirdPersonAnimationHelper] OK. Граф: \"{animScript.FilePath}\", state=\"{stateParamName}\", blend=\"{blendParamName}\"\n");
 	}
 
 	private void Update()
@@ -123,17 +144,40 @@ public partial class ThirdPersonAnimationHelper : Component
 		if (failed || movementController == null || animScript == null)
 			return;
 
-		// Целевое значение weight:
-		//   IDLE → 0.0
-		//   RUN  → 1.0
-		float targetWeight = IsRunning() ? 1.0f : 0.0f;
+		if (!animScript.IsInit)
+			return;
 
-		// Плавная интерполяция к цели
-		currentWeight = MathLib.Lerp(currentWeight, targetWeight, blendSpeed * Game.IFps);
-		currentWeight = MathLib.Clamp(currentWeight, 0.0f, 1.0f);
+		// --- State (дискретный, устанавливается мгновенно при смене) ---
+		int targetState = (int)movementController.State;
 
-		// Передать параметр в граф
-		animScript.SetParamFloat(weightParamName, currentWeight);
+		// Если INTERACT — выставляем мгновенно, но на следующем кадре возвращаем
+		if (targetState == (int)ThirdPersonMovementController.CharacterState.INTERACT)
+		{
+			if (!interactPending)
+			{
+				interactPending = true;
+				if (verbose)
+					Log.Message("[ThirdPersonAnimationHelper] INTERACT triggered\n");
+			}
+		}
+		else if (interactPending)
+		{
+			interactPending = false;
+		}
+
+		if (targetState != previousState)
+		{
+			animScript.SetParamInt(stateParamName, targetState);
+			previousState = targetState;
+			if (verbose)
+				Log.Message($"[ThirdPersonAnimationHelper] state → {targetState} ({movementController.State})\n");
+		}
+
+		// --- Blend (плавная интерполяция) ---
+		float targetBlend = ComputeTargetBlend();
+		currentBlend = MathLib.Lerp(currentBlend, targetBlend, blendSpeed * Game.IFps);
+		currentBlend = MathLib.Clamp(currentBlend, 0.0f, 1.0f);
+		animScript.SetParamFloat(blendParamName, currentBlend);
 
 		// Обновить позу каждый кадр — обязательно для MODE_ANIM_SCRIPT
 		skeletonPose.UpdatePose(Game.IFps);
@@ -141,19 +185,73 @@ public partial class ThirdPersonAnimationHelper : Component
 
 	private void Shutdown()
 	{
+		if (movementController != null)
+		{
+			movementController.OnAnimationStateChanged -= OnStateChanged;
+		}
 		animScript = null;
 		skeletonPose = null;
 		movementController = null;
 	}
 
-	#region Helpers
+	#region Blend Logic
 
-	// Проверяет, движется ли персонаж
-	private bool IsRunning()
+	/// <summary>
+	/// Вычисляет целевой blend (0..1) для текущего состояния:
+	///   IDLE/CROUCH → 0 (или NormalizedSpeed для CROUCH для постепенности)
+	///   WALK → NormalizedSpeed (0..1, обычно ~0.5)
+	///   RUN → NormalizedSpeed (0..1, обычно ~1.0)
+	///   JUMP → 1.0 (максимум — фаза взлёта)
+	///   INTERACT → 1.0
+	/// </summary>
+	private float ComputeTargetBlend()
 	{
-		return movementController.State == ThirdPersonMovementController.CharacterState.RUN
-			|| movementController.State == ThirdPersonMovementController.CharacterState.WALK;
+		switch (movementController.State)
+		{
+			case ThirdPersonMovementController.CharacterState.IDLE:
+				return 0.0f;
+
+			case ThirdPersonMovementController.CharacterState.WALK:
+			case ThirdPersonMovementController.CharacterState.RUN:
+				// NormalizedSpeed от контроллера: 0 = стоя, 1 = runSpeed
+				// Для WALK будет ~0.5, для RUN ~1.0 — граф сам решит что показывать
+				return movementController.NormalizedSpeed;
+
+			case ThirdPersonMovementController.CharacterState.JUMP:
+				return 1.0f;
+
+			case ThirdPersonMovementController.CharacterState.CROUCH:
+				// Crouch: blend от скорости передвижения (0..1 от crouchSpeed)
+				return movementController.NormalizedSpeed;
+
+			case ThirdPersonMovementController.CharacterState.INTERACT:
+				return 1.0f;
+
+			default:
+				return 0.0f;
+		}
 	}
+
+	#endregion
+
+	#region Callbacks
+
+	private void OnStateChanged(ThirdPersonMovementController.CharacterState oldState, ThirdPersonMovementController.CharacterState newState)
+	{
+		if (failed || animScript == null)
+			return;
+
+		// Если соединение разорвано, не дёргаем
+		// State устанавливается в Update; здесь только лог
+		if (verbose)
+		{
+			Log.Message($"[ThirdPersonAnimationHelper] State: {oldState} → {newState} (int: {(int)newState})\n");
+		}
+	}
+
+	#endregion
+
+	#region Helpers
 
 	// Рекурсивный поиск NodeSkeletonPose в дочерних нодах
 	private static NodeSkeletonPose FindNodeSkeletonPoseRecursive(Node parent)
@@ -181,8 +279,8 @@ public partial class ThirdPersonAnimationHelper : Component
 	/// <summary>NodeSkeletonPose персонажа.</summary>
 	public NodeSkeletonPose SkeletonPose => skeletonPose;
 
-	/// <summary>Текущее значение weight (0 = idle, 1 = run).</summary>
-	public float CurrentWeight => currentWeight;
+	/// <summary>Текущее значение blend (0..1).</summary>
+	public float CurrentBlend => currentBlend;
 
 	/// <summary>True, если компонент не смог инициализироваться.</summary>
 	public bool Failed => failed;

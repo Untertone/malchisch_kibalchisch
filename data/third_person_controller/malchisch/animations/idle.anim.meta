@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>6c5781e994a509684ad9f7287855bb46e3047f88</guid>
+	<type>animation</type>
+	<hash>574a5e6f521132139fae50cf6e6c10a37c25c1af7eebd10dd669d7c039a56cca</hash>
+	<runtimes>
+		<runtime id="6c5781e994a509684ad9f7287855bb46e3047f88" name="idle.anim" link="0" type="2">
+			<custom_parameters>
+				<parameter type="string" name="anim_mesh">guid://45c10dc93cecf433dceb589e1fb7c8d794b99679</parameter>
+				<parameter type="float" name="cur_time">18.0137768</parameter>
+			</custom_parameters>
+		</runtime>
+	</runtimes>
+</asset>

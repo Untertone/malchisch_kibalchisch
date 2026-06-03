@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>149b5f875e106f785b159607ad4908708574ac4c</guid>
+	<type>texture</type>
+	<hash>d1f90f395499d373d5597d7022ac0d58627df872f7aa710580bd590163d43a32</hash>
+	<runtimes>
+		<runtime id="149b5f875e106f785b159607ad4908708574ac4c" name="texture_pbr_20250901_metallic-texture_pbr_20250901_roughness_metalness_roughness.texture" link="0" type="6"/>
+		<runtime id="291b9a11249e41e182a52491fd4c5d99d3e1375e" name="texture_pbr_20250901_metallic-texture_pbr_20250901_roughness_metalness_roughness.texture" link="1" type="6"/>
+	</runtimes>
+	<parameters>
+		<parameter type="int" name="blur_radius">1</parameter>
+		<parameter type="string" name="height">auto</parameter>
+		<parameter type="string" name="image_format">DXT1</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="bool" name="mipmap_sharp_only_lightness">1</parameter>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="preset_name">shading (rgb)</parameter>
+		<parameter type="float" name="sharpness_intensity">0.25</parameter>
+		<parameter type="float" name="sharpness_radius">1</parameter>
+		<parameter type="bool" name="srgb_correction">1</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="width">auto</parameter>
+	</parameters>
+</asset>

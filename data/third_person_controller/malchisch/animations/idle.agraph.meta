@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>051bdccabe2dbed68b38e5c0afd024e6e5efa39b</guid>
+	<type>animation_graph</type>
+	<hash>f3738d2440486c6d7135cf37d262d96711b1dde22c35d649a8f03fc802ddf686</hash>
+	<runtimes>
+		<runtime id="051bdccabe2dbed68b38e5c0afd024e6e5efa39b" name="idle.agraph" link="0"/>
+		<runtime id="07d620b39bb8d84e38c29395d92fd5997d5aac52" name="idle" link="1" type="10"/>
+	</runtimes>
+</asset>
